@@ -1,0 +1,43 @@
+container(dir, startFlexed, start, end) {
+  display: flex
+  flex-direction: dir
+  align-items: center
+
+  &[align={start}] {
+    align-items: flex-start
+  }
+
+  &[align={end}] {
+    align-items: flex-end
+  }
+
+  > f-row,
+  > f-col,
+  > f-box {
+    if startFlexed {
+      flex: 1 1 1px
+
+      &[no-flex] {
+        flex: 0 0 auto
+      }
+    }
+
+    if !startFlexed {
+      flex: 0 0 auto
+
+      &[flex] {
+        flex: 1 1 1px
+      }
+    }
+  }
+}
+
+f-row
+  container(row, true, 'top', 'bottom')
+
+f-col
+  container(column, false, 'left', 'right')
+
+f-row > f-box,
+f-col > f-box
+  display: block

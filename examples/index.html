@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>title</title>
+    <link rel="stylesheet" href="../fbox.css" type="text/css">
+    <style>
+      html, body {
+        font-family: monospace;
+      }
+
+      figure {
+        width: 500px;
+        margin: auto;
+      }
+
+      figure f-row,
+      figure f-col,
+      figure f-box {
+        position: relative;
+        padding: 16px 8px ;
+      }
+
+      figure f-col:before,
+      figure f-row:before,
+      figure f-box:before {
+        color: white;
+        padding: 3px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        font-size: 10px;
+        line-height: 9px;
+      }
+
+      figure f-col:before {
+        content: "f-col";
+        background-color: #EBA708;
+      }
+      figure f-col {
+        z-index: 0;
+        border: 2px solid #EBA708;
+      }
+
+      figure f-row:before {
+        content: "f-row";
+        background-color: #7FBDEB;
+      }
+      figure f-row {
+        z-index: 0;
+        border: 2px solid #7FBDEB;
+      }
+
+      figure f-box:before {
+        content: "f-box";
+        background-color: #17AD16;
+      }
+      figure f-box {
+        z-index: 0;
+        border: 2px solid #17AD16;
+      }
+    </style>
+  </head>
+
+  <body>
+    <figure>
+      <figcaption>Simple Rows</figcaption>
+
+      <f-row>
+        <f-box>
+          <strong>Row 1</strong>
+        </f-box>
+        <f-box>
+          1000
+        </f-box>
+      </f-row>
+
+    </figure>
+
+    <figure>
+      <figcaption>Simple Columns</figcaption>
+
+      <f-col>
+        <f-box>
+          <strong>Row 1</strong>
+        </f-box>
+        <f-box>
+          1000
+        </f-box>
+      </f-col>
+    </figure>
+  </body>
+</html>

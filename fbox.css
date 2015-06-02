@@ -1,0 +1,90 @@
+f-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+f-row[align=top] {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+f-row[align=bottom] {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+f-row > f-row,
+f-row > f-col,
+f-row > f-box {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 1px;
+      -ms-flex: 1 1 1px;
+          flex: 1 1 1px;
+}
+f-row > f-row[no-flex],
+f-row > f-col[no-flex],
+f-row > f-box[no-flex] {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+f-col {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+f-col[align=left] {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+f-col[align=right] {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+f-col > f-row,
+f-col > f-col,
+f-col > f-box {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+f-col > f-row[flex],
+f-col > f-col[flex],
+f-col > f-box[flex] {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 1px;
+      -ms-flex: 1 1 1px;
+          flex: 1 1 1px;
+}
+f-row > f-box,
+f-col > f-box {
+  display: block;
+}

@@ -1,0 +1,30 @@
+{
+  "name": "fbox",
+  "version": "0.0.1",
+  "description": "Simple flex-box grid thingy",
+  "main": "fbox.css",
+  "scripts": {
+    "test": "mocha --reporter spec tests/**/*.js",
+    "build": "stylus -u autoprefixer-stylus -w src/fbox.styl -o fbox.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:spalger/fbox.git"
+  },
+  "keywords": [
+    "flexbox",
+    "stylus",
+    "css",
+    "table"
+  ],
+  "author": "Spencer Alger <email@spalger.com>",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/spalger/fbox/issues"
+  },
+  "homepage": "https://github.com/spalger/fbox",
+  "dependencies": {
+    "autoprefixer-stylus": "^0.6.0",
+    "stylus": "^0.51.1"
+  }
+}
